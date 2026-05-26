@@ -4,7 +4,7 @@
 # affinity: /iridisfs/ddnb/affinity/experiments/pose2-vae-experiment/affinity_an.csv
 # classes: /iridisfs/ddnb/affinity/experiments/pose2-vae-experiment/class_lst.csv
 restart: false
-limit: 1000 # limits the number of samples to load
+#limit: 1000 # limits the number of samples to load
 split: 20 # percentage of data to use for validation
 datatype: npy
 
@@ -16,27 +16,27 @@ rescale: False
 
 #### Network parameters
 
-depth:  2
-channels:  128
+# depth:  2
+#channels:  128
 # filters: [8, 16, 32, 64]
-latent_dims:  96
-pose_dims: 0 #
+#latent_dims:  96
+# pose_dims: 0 #
 
 model: c #
 
 #### Training parameters
 
 no_val_drop: true
-epochs:  400  #
+epochs:  120  #
 batch:  64 #
-learning:  0.001
+#learning:  0.001
 gpu:  true # GPU's not being used (maybe due to torch version, try another conda env)
 freq_sta: 120  # frequency of state saves
 
 #### Loss parameters
 
-beta:  0.001 # Too low can lead to overfitting, too high can lead to underfitting.
-gamma: 0.0 #
+#beta:  0.001 # Too low can lead to overfitting, too high can lead to underfitting.
+#gamma: 0.0 #
 loss_fn:  MSE
 klreduction: mean
 
